@@ -1,11 +1,19 @@
 package tn.esprit.etudecas1.entities;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.util.Date;
 import java.util.Set;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
 public class Etudiant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,7 +27,6 @@ public class Etudiant {
     private Date dateNaissance;
 
     @ManyToMany(mappedBy="etudiants")
-
     private Set<Reservation> reservations;
 
 }

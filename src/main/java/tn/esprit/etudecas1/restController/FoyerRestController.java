@@ -2,6 +2,7 @@ package tn.esprit.etudecas1.restController;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.etudecas1.entities.Etudiant;
 import tn.esprit.etudecas1.entities.Foyer;
 import tn.esprit.etudecas1.services.IFoyerService;
 
@@ -9,6 +10,8 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
+@RequestMapping("/foyers")
+
 public class FoyerRestController {
     private IFoyerService iFoyerService;
 

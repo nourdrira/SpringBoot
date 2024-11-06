@@ -15,6 +15,7 @@ import java.util.Set;
 @Entity
 
 
+
 public class Foyer implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,7 +23,8 @@ public class Foyer implements Serializable {
     private String nomF;
     private Long capaciteF;
 
-    @OneToOne(mappedBy = "foyer")
+    @OneToOnegit add .
+            (mappedBy = "foyer")
     private Universite universite;
     @OneToMany(mappedBy = "foyer")
     private Set<Bloc> blocs;

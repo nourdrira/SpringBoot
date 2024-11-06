@@ -2,6 +2,7 @@ package tn.esprit.etudecas1.services;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import tn.esprit.etudecas1.entities.Etudiant;
 import tn.esprit.etudecas1.entities.Foyer;
 import tn.esprit.etudecas1.repository.FoyerRepository;
 
@@ -35,6 +36,7 @@ public class FoyerServiceIMP implements IFoyerService {
     public void deleteFoyer(long idF) {
         foyerRepository.deleteById(idF);
     }
+
 
 
 }
