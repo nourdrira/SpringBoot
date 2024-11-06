@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/chambres")  // Point de base pour les opérations sur les chambres
+
 public class ChambreRestController {
 
     private final IChambreService iChambreService;

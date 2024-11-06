@@ -28,4 +28,7 @@ public class Chambre {
     @ManyToOne
     @JoinColumn(name = "id_bloc", nullable = false)
     private Bloc blocs;
+
+    public void setBloc(Bloc bloc) {
+    }
 }

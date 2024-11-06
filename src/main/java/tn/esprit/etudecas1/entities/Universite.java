@@ -21,6 +21,7 @@ private String nomU;
 private String address;
 
 @OneToOne
+@JoinColumn(name = "foyer_id")  // Ajout de la clé étrangère dans l'entité Universite
     private Foyer foyer;
 
 

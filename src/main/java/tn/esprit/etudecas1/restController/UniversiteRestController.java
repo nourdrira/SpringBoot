@@ -33,13 +33,17 @@ public class UniversiteRestController {
         return iUniversiteService.retrieveUniversiteById(idU);
     }
 
-    @DeleteMapping("/deleteById/{idU}")
-    public void deleteUniversite(@PathVariable long idU) {
-        iUniversiteService.deleteUniversite(idU);
-    }
 
     @PostMapping("/affecterFoyerAUniversite/{idF}/{idU}")
     public Universite affecterFoyerAUniversite(@PathVariable long idF, @PathVariable long idU ) {
         return iUniversiteService.affecterFoyerAUniversite(idF, idU);
     }
+    // API pour désaffecter un foyer d'une université
+    @PostMapping("/desaffecterFoyer")
+    public Universite desaffecterFoyer(@RequestParam long idUniversite) {
+        return iUniversiteService.desaffecterFoyerAUniversite(idUniversite);
+    }
+
+
+
 }
