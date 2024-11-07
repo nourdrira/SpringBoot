@@ -19,12 +19,19 @@ import java.util.Set;
 public class Foyer implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idF;
-    private String nomF;
-    private long capaciteF;
+    private long idFoyer;
+    private String nomFoyer;
+    private long capaciteFoyer;
 
-    @OneToOne(mappedBy = "foyer")
-    private Universite universite;
+//    @OneToOne(mappedBy = "foyer")
+//    private Universite universite;
+
+    // Déclaration de la relation OneToOne avec Universite
+    @OneToOne
+    @JoinColumn(name = "idUniversite")  // Cette colonne contiendra la clé étrangère
+    private Universite universite;  // La référence vers l'entité Universite
+
+
     @OneToMany(mappedBy = "foyer")
     private Set<Bloc> blocs;
 }

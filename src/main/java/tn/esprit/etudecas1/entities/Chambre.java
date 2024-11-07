@@ -17,8 +17,8 @@ import java.util.Set;
 public class Chambre {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idC;
-    private long numC;
+    private long idChambre;
+    private long numChambre;
 
     @Enumerated(EnumType.STRING)
     private TypeChambre TypeC;

@@ -16,9 +16,9 @@ import java.io.Serializable;
 public class Universite implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-private long idU;
-private String nomU;
-private String address;
+private long idUniversite;
+private String nomUniversite;
+private long adresse;
 
 @OneToOne
 @JoinColumn(name = "foyer_id")  // Ajout de la clé étrangère dans l'entité Universite

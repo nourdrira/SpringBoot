@@ -36,8 +36,8 @@ public class BlocRestController {
     public void deleteBloc(@PathVariable long idB){
         iBlocService.deleteBloc(idB);
     }
-    @PostMapping("/affecterChambresABloc")
-    public Bloc affecterChambresABloc(@RequestBody List<Long> numChambre, @RequestParam long idBloc) {
-        return iBlocService.affecterChambresABloc(numChambre, idBloc);
-    }
+//    @PostMapping("/affecterChambresABloc")
+//    public Bloc affecterChambresABloc(@RequestBody List<Long> numChambre, @RequestParam long idBloc) {
+//        return iBlocService.affecterChambresABloc(numChambre, idBloc);
+//    }
 }

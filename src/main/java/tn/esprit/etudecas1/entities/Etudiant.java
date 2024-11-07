@@ -18,13 +18,13 @@ public class Etudiant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private long idEtudiant;
-    private String nomEt;
-    private String prenomEt;
+    private long idEtud;
+    private String nomEtud;
+    private String prenomEtud;
     private long cin;
-    private String ecole;
     @Temporal(TemporalType.DATE)
     private Date dateNaissance;
+    private String ecole;
 
     @ManyToMany(mappedBy="etudiants")
     private Set<Reservation> reservations;

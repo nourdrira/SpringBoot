@@ -19,9 +19,11 @@ import java.util.Set;
         @Id
         @GeneratedValue (strategy = GenerationType.IDENTITY)
         private long idReservation;
-        @Temporal (TemporalType.DATE)
-        private Date anneeUniversitaire;
-        private boolean estValide;
+        private String numReservation;
+    @Temporal (TemporalType.DATE)
+        private Date debutAnneeUniv;
+       private Date finAnneeUniv;
+    private boolean estValide;
 
 @ManyToMany
         private Set<Etudiant> etudiants;
